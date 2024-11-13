@@ -8,12 +8,12 @@
 <body>
     <!--Comments-->
 
-    <!--Block level Elements-->
+      <!--Block level Elements-->
     <h1>This is abhilsh reddy</h1>
     <h2>this is abhilash</h2>
     
-    <!--Inline Elements-->
-    <sapn>Span1</sapn>
+    <!--Inline Elements-->  
+    <span>Span1</span>
     <span>Span2</span>
 
 
