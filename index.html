@@ -1,12 +1,78 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GitHub and LinkedIn Profiles</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+ 
+        <div>
+            <label for="linkedinInput">Enter LinkedIn Profile URL: </label>
+            <input type="text" id="linkedinInput" placeholder="Enter LinkedIn URL" />
+            <button id="fetchLinkedInButton">Fetch LinkedIn Profile</button>
+        </div>
+        
+        <div id="linkedinProfile" class="profile">
+            <h2>LinkedIn Profile</h2>
+            <p id="linkedinInfo"></p>
+        </div>
 
+        <div id="linkedinError" class="error-message"></div>
+    </div>
+
+    <script>
+        // Function to fetch and display GitHub user data
+        function getGitHubUser(username) {
+            fetch(`https://api.github.com/users/${username}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.message === "Not Found") {
+                        document.getElementById('githubError').textContent = 'GitHub user not found. Please check the username.';
+                        document.getElementById('githubProfile').style.display = 'none';
+                    } else {
+                        document.getElementById('githubError').textContent = '';
+                        document.getElementById('githubProfile').style.display = 'block';
+                        
+                        document.getElementById('githubUsername').textContent = data.login;
+                        document.getElementById('githubName').textContent = data.name || 'N/A';
+                        document.getElementById('githubBio').textContent = data.bio || 'No bio available';
+                        document.getElementById('githubRepos').textContent = `Public Repos: ${data.public_repos}`;
+                        document.getElementById('githubFollowers').textContent = `Followers: ${data.followers}`;
+                        document.getElementById('githubFollowing').textContent = `Following: ${data.following}`;
+                        document.getElementById('githubAvatar').src = data.avatar_url;
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching GitHub data:', error);
+                    document.getElementById('githubError').textContent = 'Error fetching GitHub data. Please try again later.';
+                });
+        }
+
+        // Adding event listener for GitHub button click
+        document.getElementById('fetchGitHubButton').addEventListener('click', () => {
+            const username = document.getElementById('usernameInput').value.trim();
+            if (username) {
+                getGitHubUser(username);
+            } else {
+                document.getElementById('githubError').textContent = 'Please enter a valid GitHub username.';
+                document.getElementById('githubProfile').style.display = 'none';
+            }
+        });
+
+        // Handling LinkedIn profiles
+        document.getElementById('fetchLinkedInButton').addEventListener('click', () => {
+            const linkedinURL = document.getElementById('linkedinInput').value.trim();
+            if (linkedinURL) {
+                document.getElementById('linkedinInfo').textContent = `LinkedIn URL: ${linkedinURL}`;
+                document.getElementById('linkedinError').textContent = '';
+                document.getElementById('linkedinProfile').style.display = 'block';
+            } else {
+                document.getElementById('linkedinError').textContent = 'Please enter a valid LinkedIn URL.';
+                document.getElementById('linkedinProfile').style.display = 'none';
+            }
+        });
+    </script>
 </body>
-</html> 
+</html>

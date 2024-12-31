@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Menu</title>
+  <style>
+   /* styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.menu-header {
+  text-align: center;
+  background-color: #e9c46a;
+  color: #264653;
+  padding: 20px;
+}
+
+.menu-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.menu-content {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.menu-category h2 {
+  color: #e76f51;
+  border-bottom: 2px solid #e76f51;
+  padding-bottom: 5px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 15px 0;
+  padding: 10px;
+  background: #f4a261;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.dish-name {
+  font-weight: bold;
+  color: #264653;
+}
+
+.dish-price {
+  float: right;
+  font-weight: bold;
+}
+
+.dish-description {
+  margin: 5px 0 0;
+  font-size: 0.9rem;
+}
+
+.menu-footer {
+  text-align: center;
+  background-color: #2a9d8f;
+  color: white;
+  padding: 10px;
+}
+
+
+  </style>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="menu-header">
+    <h1>Delicious Dine</h1>
+    <p>A taste you'll remember!</p>
+  </header>
+  <main class="menu-content">
+    <section class="menu-category">
+      <h2>Appetizers</h2>
+      <ul>
+        <li>
+          <span class="dish-name">Bruschetta</span>
+          <span class="dish-price">$8.99</span>
+          <p class="dish-description">Grilled bread topped with fresh tomatoes and basil.</p>
+        </li>
+        <li>
+          <span class="dish-name">Stuffed Mushrooms</span>
+          <span class="dish-price">$10.99</span>
+          <p class="dish-description">Mushrooms stuffed with cheese and herbs.</p>
+        </li>
+      </ul>
+    </section>
+    <section class="menu-category">
+      <h2>Main Courses</h2>
+      <ul>
+        <li>
+          <span class="dish-name">Grilled Salmon</span>
+          <span class="dish-price">$18.99</span>
+          <p class="dish-description">Served with a side of vegetables and rice.</p>
+        </li>
+        <li>
+          <span class="dish-name">Ribeye Steak</span>
+          <span class="dish-price">$25.99</span>
+          <p class="dish-description">Cooked to perfection with a side of mashed potatoes.</p>
+        </li>
+      </ul>
+    </section>
+    <section class="menu-category">
+      <h2>Desserts</h2>
+      <ul>
+        <li>
+          <span class="dish-name">Tiramisu</span>
+          <span class="dish-price">$6.99</span>
+          <p class="dish-description">Classic Italian dessert with layers of coffee and cream.</p>
+        </li>
+        <li>
+          <span class="dish-name">Chocolate Lava Cake</span>
+          <span class="dish-price">$7.99</span>
+          <p class="dish-description">Warm chocolate cake with a molten center.</p>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <footer class="menu-footer">
+    <p>Visit us for an unforgettable dining experience!</p>
+  </footer>
+</body>
+</html>

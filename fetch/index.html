@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AJAX Fetch Multiple Posts Example</title>
+<body>
+
+  <h1> Fetch Posts Example</h1>
+  <p>Click the button below to load posts:</p>
+
+  
+  <div id="posts">Posts will load here...</div>
+
+ 
+  <button id="loadMoreBtn" aria-label="Load more posts">Load More Posts</button>
+
+  <script>
+    let postStart = 0; 
+    document.getElementById("loadMoreBtn").addEventListener("click", function() {
+      loadPosts(postStart);
+    });
+
+     
+    function loadPosts(start) {
+       fetch(`https://jsonplaceholder.typicode.com/posts?_start=${start}&_limit=10`)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        })
+        .then(data => {
+           const postsContainer = document.getElementById("posts");
+          data.forEach(post => {
+            const postElement = document.createElement("div");
+            
+            postElement.innerHTML = `
+              <div class="post-title">Post #${post.id}: ${post.title}</div>
+              <p>${post.body}</p>
+            `;
+            postsContainer.appendChild(postElement);
+          });
+        
+        })
+        .catch(error => {
+          console.log("Error:", error);
+          document.getElementById("posts").innerHTML = `<strong>Error loading posts.</strong>`;
+        });
+    }
+  </script>
+
+</body>
+</html>

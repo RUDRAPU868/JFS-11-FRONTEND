@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Website</title>
+  <style>
+    /* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #333;
+  color: white;
+  padding: 1rem 0;
+}
+
+.navbar h1 {
+  margin: 0;
+  float: left;
+}
+
+.navbar nav {
+  float: right;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  display: inline;
+  margin-left: 15px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  background: url('https://via.placeholder.com/1920x600') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.hero h2 {
+  margin-top: 0;
+}
+
+.hero .btn {
+  display: inline-block;
+  background: #007BFF;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+.hero .btn:hover {
+  background: #0056b3;
+}
+
+/* About Section */
+.about {
+  padding: 2rem 0;
+  background: #f4f4f4;
+  text-align: center;
+}
+
+.about h2 {
+  margin-top: 0;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+
+  </style>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <h1>My Website</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="container">
+      <h2>Welcome to My Website</h2>
+      <p>Your go-to place for amazing services and information.</p>
+      <a href="#about" class="btn">Learn More</a>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>We are a passionate team dedicated to providing the best experience for our customers.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 My Website. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

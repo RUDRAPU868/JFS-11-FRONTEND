@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Learning Platform</title>
+    <style>
+        /* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Hero Section */
+.hero {
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Courses Section */
+.courses {
+    padding: 50px;
+    background-color: #f4f4f4;
+}
+
+.course-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.course-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+.course-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 50px;
+    background-color: #007BFF;
+    color: white;
+}
+
+/* Enrollment Section */
+.enroll {
+    padding: 50px;
+    text-align: center;
+}
+
+.enroll form {
+    display: inline-block;
+    max-width: 400px;
+    width: 100%;
+}
+
+.enroll input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.enroll button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.enroll button:hover {
+    background-color: #218838;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Learn Anything, Anytime, Anywhere</h1>
+            <p>Join millions of learners worldwide and boost your skills with our online courses.</p>
+            <a href="#courses" class="btn">Explore Courses</a>
+        </div>
+    </header>
+
+    <!-- Courses Section -->
+    <section id="courses" class="courses">
+        <h2>Popular Courses</h2>
+        <div class="course-list">
+            <div class="course-card">
+                <img src="images/course1.jpg" alt="Course 1">
+                <h3>Web Development</h3>
+                <p>Learn HTML, CSS, and JavaScript to build stunning websites.</p>
+            </div>
+            <div class="course-card">
+                <img src="images/course2.jpg" alt="Course 2">
+                <h3>Data Science</h3>
+                <p>Master Python and data analysis to advance your career.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>What Our Students Say</h2>
+        <p>"This platform transformed my career! Highly recommend it to anyone." - Jane Doe</p>
+    </section>
+
+    <!-- Enrollment Form -->
+    <section class="enroll">
+        <h2>Enroll Now</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <button type="submit" class="btn">Join Now</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Online Learning Platform. All rights reserved.</p>
+        <p>Follow us: <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a></p>
+    </footer>
+</body>
+</html>
